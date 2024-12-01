@@ -41,7 +41,7 @@ app.get("/edit/:id", async (req, res) => {
   }
 });
 
-// Create a new post
+// New post
 app.post("/api/posts", async (req, res) => {
   try {
     const response = await axios.post(`${API_URL}/posts`, req.body);
@@ -52,7 +52,6 @@ app.post("/api/posts", async (req, res) => {
   }
 });
 
-// Partially update a post
 app.post("/api/posts/:id", async (req, res) => {
   console.log("called");
   try {
